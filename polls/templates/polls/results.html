@@ -1,0 +1,20 @@
+{%extends 'polls/base.html'%}
+
+{%block content%}
+<h1>{{ question.question_text }}</h1>
+
+<!--<ul>-->
+<!--{% for choice in question.choice_set.all %}-->
+<!--   <li>{{ choice.choice_text }} &#45;&#45; {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>-->
+<!--{% endfor %}-->
+<!--</ul>-->
+
+<ul class="list-group">
+    <li class="list-group-item">{{ question.option_one }} &mdash; <strong>{{ question.option_one_count }}</strong></li>
+    <li class="list-group-item">{{ question.option_two }} &mdash; <strong>{{ question.option_two_count }}</strong></li>
+    <li class="list-group-item">{{ question.option_three }} &mdash; <strong>{{ question.option_three_count }}</strong></li>
+</ul>
+
+
+
+{% endblock %}
